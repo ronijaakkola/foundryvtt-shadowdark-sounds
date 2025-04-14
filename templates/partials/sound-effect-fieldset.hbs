@@ -3,7 +3,7 @@
     <p class="hint">{{hint}}</p>
 
     <div class="form-group">
-        <label>Enable Sound</label>
+        <label>{{localize "SDSOUNDS.sound_configuration_enable_sound"}}</label>
         <div class="form-fields">
             <input type="checkbox" name="{{prefix}}-enabled" id="{{prefix}}-enabled" {{#if enabled}}checked{{/if}}>
         </div>
@@ -11,14 +11,14 @@
 
     <div id="{{prefix}}-options" class="collapsible {{#unless enabled}}collapsed{{/unless}}">
         <div class="form-group">
-            <label for="{{prefix}}-sound">Sound File</label>
+            <label for="{{prefix}}-sound">{{localize "SDSOUNDS.sound_configuration_sound_file"}}</label>
             <div class="form-fields">
                 <file-picker type="file" name="{{prefix}}-sound" value="{{sound}}" accept="*"></file-picker>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="{{prefix}}-volume">Sound Volume</label>
+            <label for="{{prefix}}-volume">{{localize "SDSOUNDS.sound_configuration_sound_volume"}}</label>
             <div class="form-fields">
                 <input type="range" name="{{prefix}}-volume" id="{{prefix}}-volume" min="0" max="1" step="0.05"
                     value="{{volume}}">
@@ -27,7 +27,7 @@
         </div>
 
         <button type="button" class="test-{{prefix}}-sound">
-            <i class="fas fa-play"></i> Test Sound
+            <i class="fas fa-play"></i> {{localize "SDSOUNDS.sound_configuration_button_test_sound"}}
         </button>
     </div>
 </fieldset>

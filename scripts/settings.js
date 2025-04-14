@@ -7,17 +7,17 @@ export function registerSettings() {
     /* General Settings */
     /* ---------------- */
     game.settings.registerMenu("shadowdark-sounds", "customSettingsMenu", {
-        name: "Sound Configuration",
-        label: "Configure Sounds",
-        hint: "Configure which sound triggers to use, sound files, and volume.",
+        name: game.i18n.localize("SDSOUNDS.settings_label_sound_configuration"),
+        label: game.i18n.localize("SDSOUNDS.settings_label_sound_configuration"),
+        hint: game.i18n.localize("SDSOUNDS.settings_hint_sound_configuration"),
         icon: "fas fa-volume-high",
         type: SoundConfigurationApp,
         restricted: true
     });
 
     game.settings.register("shadowdark-sounds", "shadowdark-sounds-enabled", {
-		name: "Enable Shadowdark Sounds",
-        hint: "Configure whether or not sound effects are played for certain actions.",
+		name: game.i18n.localize("SDSOUNDS.settings_label_enable_module"),
+        hint: game.i18n.localize("SDSOUNDS.settings_hint_enable_module"),
         scope: "client",
         config: true,
 		default: true,
@@ -28,7 +28,7 @@ export function registerSettings() {
     /* --------------------------- */
     game.settings.register("shadowdark-sounds", "torch-ignite-enabled", {
 		name: "Play Torch Ignite Sound",
-        scope: "client",
+        scope: "world",
         config: false,
 		default: true,
 		type: Boolean,
@@ -60,7 +60,7 @@ export function registerSettings() {
     /* -------------------------- */
     game.settings.register("shadowdark-sounds", "torch-douse-enabled", {
 		name: "Play Torch Douse Sound",
-        scope: "client",
+        scope: "world",
         config: false,
 		default: true,
 		type: Boolean,
@@ -92,7 +92,7 @@ export function registerSettings() {
     /* ------------------------- */
     game.settings.register("shadowdark-sounds", "torch-drop-enabled", {
 		name: "Play Torch Drop Sound",
-        scope: "client",
+        scope: "world",
         config: false,
 		default: true,
 		type: Boolean,
@@ -151,6 +151,38 @@ export function registerSettings() {
         },
         default: 0.5,
     });
+
+    /* Torch Expire Sound Settings */
+    /* --------------------------- */
+    game.settings.register("shadowdark-sounds", "torch-expire-enabled", {
+		name: "Play Torch Expire Sound",
+        scope: "client",
+        config: false,
+		default: true,
+		type: Boolean,
+	});
+
+    game.settings.register("shadowdark-sounds", "torch-expire-sound", {
+		name: "Torch Expire Sound",
+        scope: "world",
+		config: false,
+		type: String,
+        filePicker: true,
+        requiresReload: true
+	});
+
+    game.settings.register("shadowdark-sounds", "torch-expire-volume", {
+        name: "Torch Expire Volume",
+        scope: "world",
+        config: false,
+        type: Number,
+        range: {
+            min: 0.0,
+            max: 1.0,
+            step: 0.05
+        },
+        default: 0.5,
+    });
 }
 
 class SoundConfigurationApp extends HandlebarsApplicationMixin(ApplicationV2) {
@@ -186,38 +218,66 @@ class SoundConfigurationApp extends HandlebarsApplicationMixin(ApplicationV2) {
     }
 
     _prepareContext(options) {
+        const torchIgniteTitle = game.i18n.localize("SDSOUNDS.torch_ignite_title");
+        const torchIgniteHint = game.i18n.localize("SDSOUNDS.torch_ignite_hint");
         const torchIgniteEnabled = game.settings.get("shadowdark-sounds", "torch-ignite-enabled");
         const torchIgniteSound = game.settings.get("shadowdark-sounds", "torch-ignite-sound");
         const torchIgniteVolume = game.settings.get("shadowdark-sounds", "torch-ignite-volume");
 
+        const torchDouseTitle = game.i18n.localize("SDSOUNDS.torch_douse_title");
+        const torchDouseHint = game.i18n.localize("SDSOUNDS.torch_douse_hint");
         const torchDouseEnabled = game.settings.get("shadowdark-sounds", "torch-douse-enabled");
         const torchDouseSound = game.settings.get("shadowdark-sounds", "torch-douse-sound");
         const torchDouseVolume = game.settings.get("shadowdark-sounds", "torch-douse-volume");
 
+        const torchDropTitle = game.i18n.localize("SDSOUNDS.torch_drop_title");
+        const torchDropHint = game.i18n.localize("SDSOUNDS.torch_drop_hint");
         const torchDropEnabled = game.settings.get("shadowdark-sounds", "torch-drop-enabled");
         const torchDropSound = game.settings.get("shadowdark-sounds", "torch-drop-sound");
         const torchDropVolume = game.settings.get("shadowdark-sounds", "torch-drop-volume");
 
+        const torchPickupTitle = game.i18n.localize("SDSOUNDS.torch_pickup_title");
+        const torchPickupHint = game.i18n.localize("SDSOUNDS.torch_pickup_hint");
         const torchPickupEnabled = game.settings.get("shadowdark-sounds", "torch-pickup-enabled");
         const torchPickupSound = game.settings.get("shadowdark-sounds", "torch-pickup-sound");
         const torchPickupVolume = game.settings.get("shadowdark-sounds", "torch-pickup-volume");
+
+        const torchExpireTitle = game.i18n.localize("SDSOUNDS.torch_expire_title");
+        const torchExpireHint = game.i18n.localize("SDSOUNDS.torch_expire_hint");
+        const torchExpireEnabled = game.settings.get("shadowdark-sounds", "torch-expire-enabled");
+        const torchExpireSound = game.settings.get("shadowdark-sounds", "torch-expire-sound");
+        const torchExpireVolume = game.settings.get("shadowdark-sounds", "torch-expire-volume");
         
         return {
+            torchIgniteTitle,
+            torchIgniteHint,
             torchIgniteEnabled,
             torchIgniteSound,
             torchIgniteVolume,
 
+            torchDouseTitle,
+            torchDouseHint,
             torchDouseEnabled,
             torchDouseSound,
             torchDouseVolume,
 
+            torchDropTitle,
+            torchDropHint,
             torchDropEnabled,
             torchDropSound,
             torchDropVolume,
 
+            torchPickupTitle,
+            torchPickupHint,
             torchPickupEnabled,
             torchPickupSound,
             torchPickupVolume,
+
+            torchExpireTitle,
+            torchExpireHint,
+            torchExpireEnabled,
+            torchExpireSound,
+            torchExpireVolume,
 
             buttons: [
                 { type: "submit", icon: "fa-solid fa-save", label: "SETTINGS.Save" }
@@ -231,6 +291,7 @@ class SoundConfigurationApp extends HandlebarsApplicationMixin(ApplicationV2) {
             "torch-douse",
             "torch-drop",
             "torch-pickup",
+            "torch-expire",
         ];
 
         for (const prefix of soundPrefixes) {

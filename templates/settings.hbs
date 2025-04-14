@@ -2,8 +2,8 @@
 
     {{> "modules/shadowdark-sounds/templates/partials/sound-effect-fieldset.hbs"
     id="sd-sounds-torch-ignite"
-    title="Light Source: Ignite"
-    hint="Plays when a character ignites a light source."
+    title=torchIgniteTitle
+    hint=torchIgniteHint
     prefix="torch-ignite"
     enabled=torchIgniteEnabled
     sound=torchIgniteSound
@@ -12,8 +12,8 @@
 
     {{> "modules/shadowdark-sounds/templates/partials/sound-effect-fieldset.hbs"
     id="sd-sounds-torch-douse"
-    title="Light Source: Douse"
-    hint="Plays when a character douses a light source."
+    title=torchDouseTitle
+    hint=torchDouseHint
     prefix="torch-douse"
     enabled=torchDouseEnabled
     sound=torchDouseSound
@@ -22,8 +22,8 @@
 
     {{> "modules/shadowdark-sounds/templates/partials/sound-effect-fieldset.hbs"
     id="sd-sounds-torch-drop"
-    title="Light Source: Drop"
-    hint="Plays when a character drops a light source to ground."
+    title=torchDropTitle
+    hint=torchDropHint
     prefix="torch-drop"
     enabled=torchDropEnabled
     sound=torchDropSound
@@ -32,12 +32,22 @@
 
     {{> "modules/shadowdark-sounds/templates/partials/sound-effect-fieldset.hbs"
     id="sd-sounds-torch-pickup"
-    title="Light Source: Pickup"
-    hint="Plays when a character picks up a light source from ground."
+    title=torchPickupTitle
+    hint=torchPickupHint
     prefix="torch-pickup"
     enabled=torchPickupEnabled
     sound=torchPickupSound
     volume=torchPickupVolume
+    }}
+
+    {{> "modules/shadowdark-sounds/templates/partials/sound-effect-fieldset.hbs"
+    id="sd-sounds-torch-expire"
+    title=torchExpireTitle
+    hint=torchExpireHint
+    prefix="torch-expire"
+    enabled=torchExpireEnabled
+    sound=torchExpireSound
+    volume=torchExpireVolume
     }}
 
 </div>
