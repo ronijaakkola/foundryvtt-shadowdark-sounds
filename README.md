@@ -13,17 +13,18 @@ Enables playing sounds from various triggers in the Shadowdark system.
 ## Triggers
 Currently supported triggers for sound effects are:
 
-#### Light Source: Ignite
+### Light Source
+#### Ignite
 Plays when a character ignites a light source.
 
-#### Light Source: Douse
+#### Douse
 Plays when a character douses a light source.
 
-#### Light Source: Drop
+#### Drop
 Plays when a character drops a light source on the ground.
 
-#### Light Source: Pickup
+#### Pickup
 Plays when a character picks up a light source from the ground.
 
-#### Light Source: Expire
+#### Expire
 Plays when a light source expires.
