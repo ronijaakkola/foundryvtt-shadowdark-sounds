@@ -1,0 +1,33 @@
+<fieldset id="{{id}}">
+    <legend>{{title}}</legend>
+    <p class="hint">{{hint}}</p>
+
+    <div class="form-group">
+        <label>Enable Sound</label>
+        <div class="form-fields">
+            <input type="checkbox" name="{{prefix}}-enabled" id="{{prefix}}-enabled" {{#if enabled}}checked{{/if}}>
+        </div>
+    </div>
+
+    <div id="{{prefix}}-options" class="collapsible {{#unless enabled}}collapsed{{/unless}}">
+        <div class="form-group">
+            <label for="{{prefix}}-sound">Sound File</label>
+            <div class="form-fields">
+                <file-picker type="file" name="{{prefix}}-sound" value="{{sound}}" accept="*"></file-picker>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="{{prefix}}-volume">Sound Volume</label>
+            <div class="form-fields">
+                <input type="range" name="{{prefix}}-volume" id="{{prefix}}-volume" min="0" max="1" step="0.05"
+                    value="{{volume}}">
+                <span class="range-value" data-for="{{prefix}}-volume">{{volume}}</span>
+            </div>
+        </div>
+
+        <button type="button" class="test-{{prefix}}-sound">
+            <i class="fas fa-play"></i> Test Sound
+        </button>
+    </div>
+</fieldset>

@@ -1,0 +1,27 @@
+.collapsible {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: visible;
+  max-height: 112px;
+  opacity: 1;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+}
+
+.collapsible.collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.shadowdark-sounds-settings {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.standard-form fieldset {
+  gap: 0.75rem;
+}
