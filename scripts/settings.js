@@ -39,6 +39,7 @@ export function registerSettings() {
         scope: "world",
 		config: false,
 		type: String,
+        default: "modules/shadowdark-sounds/assets/sounds/light-source-ignite.ogg",
         filePicker: true,
         requiresReload: true
 	});
@@ -71,6 +72,7 @@ export function registerSettings() {
         scope: "world",
 		config: false,
 		type: String,
+        default: "modules/shadowdark-sounds/assets/sounds/light-source-douse.ogg",
         filePicker: true,
         requiresReload: true
 	});
@@ -103,6 +105,7 @@ export function registerSettings() {
         scope: "world",
 		config: false,
 		type: String,
+        default: "modules/shadowdark-sounds/assets/sounds/light-source-drop.ogg",
         filePicker: true,
         requiresReload: true
 	});
@@ -135,6 +138,7 @@ export function registerSettings() {
         scope: "world",
 		config: false,
 		type: String,
+        default: "modules/shadowdark-sounds/assets/sounds/light-source-pickup.ogg",
         filePicker: true,
         requiresReload: true
 	});
@@ -167,6 +171,7 @@ export function registerSettings() {
         scope: "world",
 		config: false,
 		type: String,
+        default: "modules/shadowdark-sounds/assets/sounds/light-source-expire.ogg",
         filePicker: true,
         requiresReload: true
 	});
