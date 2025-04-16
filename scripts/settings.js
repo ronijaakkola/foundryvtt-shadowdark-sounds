@@ -318,7 +318,7 @@ class SoundConfigurationApp extends HandlebarsApplicationMixin(ApplicationV2) {
                         return;
                     }
 
-                    playAudioOneShot(soundPath, volume);
+                    playAudioOneShot(soundPath, volume, false);
                 });
             }
 
