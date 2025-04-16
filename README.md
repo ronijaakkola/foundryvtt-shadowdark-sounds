@@ -25,6 +25,6 @@ This module is in its beta stage. All kinds of contributions are warmly welcome.
 
 - Report bugs
 - Suggest features (new triggers etc.)
-- Curate and suggest high-quality, **public domain** sound effects
+- Curate and suggest high-quality, sound effects (need to be commercially free to use and edit)
 - Translate this module to a language you speak
 - Contribute to implementation
