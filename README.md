@@ -2,6 +2,11 @@
 
 <p align="left"><i>This module enables playing sounds based on various triggers in the Shadowdark FoundryVTT system.</i></p>
 
+## Installation
+During the beta, this module is only available via a manual install. To install, go to the Foundry admin panel, browse to Add-On Modules and paste the following manifest URL: 
+
+<code>https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases/download/v0.2-beta/module.json</code>
+
 ## Features
 - **Sounds**: Play sound effects triggered from various Shadowdark events (see Triggers for more information)
 - **Ready to use**: Includes curated, high-quality sound effects (with CC0 licence!)
