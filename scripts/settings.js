@@ -18,7 +18,7 @@ export function registerSettings() {
     game.settings.register("shadowdark-sounds", "shadowdark-sounds-enabled", {
 		name: game.i18n.localize("SDSOUNDS.settings_label_enable_module"),
         hint: game.i18n.localize("SDSOUNDS.settings_hint_enable_module"),
-        scope: "client",
+        scope: "world",
         config: true,
 		default: true,
 		type: Boolean,
