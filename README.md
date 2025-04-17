@@ -1,4 +1,9 @@
 <h1 align="left">Shadowdark Sounds for FoundryVTT</h1>
+<p align="left">
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fronijaakkola%2Ffoundryvtt-shadowdark-sounds%2Fmain%2Fmodule.json&query=%24.compatibility.verified&logo=foundryvirtualtabletop&logoColor=white&label=Foundry%20version&labelColor=%23FE6A1F&color=black" />
+  <a href="https://foundryvtt.com/packages/shadowdark"><img src="https://img.shields.io/badge/system-shadowdark-black?labelColor=white" /></a>
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fronijaakkola%2Ffoundryvtt-shadowdark-sounds%2Fmain%2Fmodule.json&query=%24.version&logoColor=white&label=version&labelColor=white&color=black" />
+</p>
 
 <p align="left"><i>This module enables playing sounds based on various triggers in the Shadowdark FoundryVTT system.</i></p>
 
@@ -33,3 +38,6 @@ This module is in its beta stage. All kinds of contributions are warmly welcome.
 - Curate and suggest high-quality sound effects (need to be commercially free to use and edit)
 - Translate this module to a language you speak
 - Contribute to implementation
+
+## Attributions
+This module uses modified commercially free sound effects. See the full list of sounds, their authors and licences [here](https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/tree/main/assets/sounds).
