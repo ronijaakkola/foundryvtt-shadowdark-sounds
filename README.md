@@ -14,7 +14,7 @@ During the beta, this module is only available via a manual install. To install,
 
 ## Features
 - **Sounds**: Play sound effects triggered from various Shadowdark events (see Triggers for more information)
-- **Ready to use**: Includes curated, high-quality sound effects (with CC0 licence!)
+- **Ready to use**: Includes curated, high-quality sound effects (that are free to use!)
 - **Make it yours**: Full control over sound effects
   - Enable/disable each trigger separately
   - Override any effect with your custom sound file
