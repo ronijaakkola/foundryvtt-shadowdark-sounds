@@ -5,7 +5,7 @@
   overflow: visible;
   max-height: 112px;
   opacity: 1;
-  transition: max-height 0.3s ease-in-out, opacity 0.3s ease;
+  transition: max-height 0.3s ease-in-out, margin, opacity 0.3s ease;
 }
 
 .collapsible.collapsed {
@@ -13,6 +13,7 @@
   opacity: 0;
   pointer-events: none;
   overflow: hidden;
+  margin-top: -0.75rem; /* Hacky fix to remove the gap between the elements */
 }
 
 .shadowdark-sounds-settings {
