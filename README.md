@@ -10,7 +10,7 @@
 ## Installation
 During the beta, this module is only available via a manual install. To install, go to the Foundry admin panel, browse to Add-On Modules and paste the following manifest URL: 
 
-<code>https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases/download/v0.2-beta/module.json</code>
+<code>https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases/download/v0.3-beta/module.json</code>
 
 ## Features
 - **Sounds**: Play sound effects triggered from various Shadowdark events (see Triggers for more information)
