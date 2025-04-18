@@ -5,6 +5,8 @@
   <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fronijaakkola%2Ffoundryvtt-shadowdark-sounds%2Fmain%2Fmodule.json&query=%24.version&logoColor=white&label=version&labelColor=white&color=black" />
 </p>
 
+<p><a href="https://ko-fi.com/ronihelppi"><img src="https://github.com/user-attachments/assets/0a7e973f-15af-40ce-803c-1734f5bc7d7c" width="161" alt="Buy Me a Torch Button" /></a></p>
+
 <p align="left"><i>This module enables playing sounds based on various triggers in the Shadowdark FoundryVTT system.</i></p>
 
 ## Installation
