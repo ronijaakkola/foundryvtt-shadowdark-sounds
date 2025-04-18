@@ -14,6 +14,8 @@ During the beta, this module is only available via a manual install. To install,
 
 <code>https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases/latest/download/module.json</code>
 
+**Note! The module requires [libWrapper](https://foundryvtt.com/packages/lib-wrapper) to be installed!**
+
 ## Features
 - **Sounds**: Play sound effects triggered from various Shadowdark events (see Triggers for more information)
 - **Ready to use**: Includes curated, high-quality sound effects (that are free to use!)
