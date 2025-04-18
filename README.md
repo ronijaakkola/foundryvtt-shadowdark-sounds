@@ -5,16 +5,20 @@
   <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fronijaakkola%2Ffoundryvtt-shadowdark-sounds%2Fmain%2Fmodule.json&query=%24.version&logoColor=white&label=version&labelColor=white&color=black" />
 </p>
 
+<p><a href="https://ko-fi.com/ronihelppi"><img src="https://github.com/user-attachments/assets/0a7e973f-15af-40ce-803c-1734f5bc7d7c" width="161" alt="Buy Me a Torch Button" /></a></p>
+
 <p align="left"><i>This module enables playing sounds based on various triggers in the Shadowdark FoundryVTT system.</i></p>
 
 ## Installation
 During the beta, this module is only available via a manual install. To install, go to the Foundry admin panel, browse to Add-On Modules and paste the following manifest URL: 
 
-<code>https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases/download/v0.2-beta/module.json</code>
+<code>https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases/latest/download/module.json</code>
+
+**Note! The module requires [libWrapper](https://foundryvtt.com/packages/lib-wrapper) to be installed!**
 
 ## Features
 - **Sounds**: Play sound effects triggered from various Shadowdark events (see Triggers for more information)
-- **Ready to use**: Includes curated, high-quality sound effects (with CC0 licence!)
+- **Ready to use**: Includes curated, high-quality sound effects (that are free to use!)
 - **Make it yours**: Full control over sound effects
   - Enable/disable each trigger separately
   - Override any effect with your custom sound file
