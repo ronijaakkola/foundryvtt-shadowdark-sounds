@@ -1,5 +1,5 @@
 {
-  "SDSOUNDS.error_init_libwrapper": "Shadowdark requires the 'libWrapper' module. Please install and enable it.",
+  "SDSOUNDS.error_init_libwrapper": "Shadowdark Sounds requires the 'libWrapper' module. Please install and enable it.",
   "SDSOUNDS.settings_label_sound_configuration": "Sound Configuration",
   "SDSOUNDS.settings_button_sound_configuration": "Configure Sounds",
   "SDSOUNDS.settings_hint_sound_configuration": "Configure which sound triggers to use, sound files, and volume.",
