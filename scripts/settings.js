@@ -24,6 +24,15 @@ export function registerSettings() {
 		type: Boolean,
 	});
 
+    game.settings.register("shadowdark-sounds", "shadowdark-enable-positional-audio", {
+		name: game.i18n.localize("SDSOUNDS.settings_label_enable_positional_audio"),
+        hint: game.i18n.localize("SDSOUNDS.settings_hint_enable_positional_audio"),
+        scope: "world",
+        config: true,
+		default: false,
+		type: Boolean,
+	});
+
     /* Torch Ignite Sound Settings */
     /* --------------------------- */
     game.settings.register("shadowdark-sounds", "torch-ignite-enabled", {

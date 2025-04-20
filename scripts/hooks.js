@@ -1,4 +1,4 @@
-import { playAudioOneShot } from "./helpers.js";
+import { playAudio, playAudioOneShot, playPositionalAudioOneShot, getToken } from "./helpers.js";
 
 export function registerHooks() {
 
@@ -9,26 +9,13 @@ export function registerHooks() {
         "game.system.apps.LightSourceTrackerSD.prototype.toggleLightSource",
         async function (wrapped, ...args) {
             const result = await wrapped.apply(this, args);
-            
-            if (!game.settings.get("shadowdark-sounds", "shadowdark-sounds-enabled")) {
-                return result;
-            }
+            const token = getToken(args[1]?.actor?.id);
 
             if (args[1]?.system.light.active) {
-                if (game.settings.get("shadowdark-sounds", "torch-ignite-enabled")) {
-                    playAudioOneShot(
-                        game.settings.get("shadowdark-sounds", "torch-ignite-sound"),
-                        game.settings.get("shadowdark-sounds", "torch-ignite-volume")
-                    );
-                }
+                playAudio("torch-ignite", token);
             }
             else {
-                if (game.settings.get("shadowdark-sounds", "torch-douse-enabled")) {
-                    playAudioOneShot(
-                        game.settings.get("shadowdark-sounds", "torch-douse-sound"),
-                        0.5
-                    );
-                }
+                playAudio("torch-douse", token);
             }
 
             return result;
