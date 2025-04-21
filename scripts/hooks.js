@@ -1,4 +1,5 @@
-import { playAudio, playAudioOneShot } from "./helpers.js";
+import { playAudio, playAudioOneShot } from "./audio.js";
+import { isTheLastLightSource } from "./helpers.js";
 
 export function registerHooks() {
 
@@ -67,9 +68,17 @@ export function registerHooks() {
         "game.system.documents.ActorSD.prototype.yourLightExpired",
         async function (wrapped, ...args) {
             const result = await wrapped.apply(this, args);
+            const lastLightSource = isTheLastLightSource();
 
-            if (game.settings.get("shadowdark-sounds", "torch-expire-enabled")) {
-                playAudio("torch-expire");
+            if (lastLightSource) {
+                if (game.settings.get("shadowdark-sounds", "torch-expire-last-enabled")) {
+                    playAudio("torch-expire-last");
+                }
+            }
+            else {
+                if (game.settings.get("shadowdark-sounds", "torch-expire-enabled")) {
+                    playAudio("torch-expire");
+                }
             }
 
             return result;
