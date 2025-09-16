@@ -26,3 +26,7 @@
 .standard-form fieldset {
   gap: 0.75rem;
 }
+
+.volume-range-value {
+  flex: 0 0 auto;
+}
