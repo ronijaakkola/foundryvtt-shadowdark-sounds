@@ -1,4 +1,4 @@
-import { playAudioOneShot } from "./helpers.js";
+import { playAudioOneShot } from "./audio.js";
 
 const { ApplicationV2, HandlebarsApplicationMixin } = foundry.applications.api
 
