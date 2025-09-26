@@ -2,7 +2,7 @@
   "id": "shadowdark-sounds",
   "title": "Shadowdark Sounds",
   "description": "Enables playing sounds from various triggers in the Shadowdark system.",
-  "version": "1.0-beta-1",
+  "version": "1.0-beta-2",
   "author": "Roni Helppi",
   "esmodules": ["scripts/main.js"],
   "styles": [
@@ -43,7 +43,7 @@
     },
     "bugs": "https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/issues",
     "changelog": "https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases",
-    "download": "https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases/download/1.0-beta-1/module.zip",
+    "download": "https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases/download/1.0-beta-2/module.zip",
     "manifest": "https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/releases/latest/download/module.json",
     "readme": "https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds/blob/main/README.md",
     "url": "https://github.com/ronijaakkola/foundryvtt-shadowdark-sounds"
