@@ -33,6 +33,7 @@ Currently supported triggers for sound effects are:
 - **Drop** - _Plays when a character drops a light source on the ground_
 - **Pickup** - _Plays when a character picks up a light source from the ground_
 - **Expire** - _Plays when a light source expires_
+- **Last light expire** - _Plays when the last light source expires_
 
 ## Contributing
 This module is in its beta stage. All kinds of contributions are warmly welcome. You can contribute in various ways:
