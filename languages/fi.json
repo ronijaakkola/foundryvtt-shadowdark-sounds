@@ -18,5 +18,7 @@
   "SDSOUNDS.torch_pickup_title": "Valonlähde: Nosto",
   "SDSOUNDS.torch_pickup_hint": "Toistetaan, kun hahmo nostaa valonlähteen maasta.",
   "SDSOUNDS.torch_expire_title": "Valonlähde: Loppu",
-  "SDSOUNDS.torch_expire_hint": "Toistetaan, kun valonlähde sammuu itsestään."
+  "SDSOUNDS.torch_expire_hint": "Toistetaan, kun valonlähde sammuu itsestään.",
+  "SDSOUNDS.torch_expire_last_title": "Light Source: Expire Last",
+  "SDSOUNDS.torch_expire_last_hint": "Plays when the last light source expires, leaving the character in darkness."
 }
