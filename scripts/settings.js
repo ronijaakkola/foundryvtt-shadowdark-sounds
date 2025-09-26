@@ -188,6 +188,39 @@ export function registerSettings() {
         },
         default: 0.5,
     });
+
+    /* Torch Expire Last Sound Settings */
+    /* -------------------------------- */
+    game.settings.register("shadowdark-sounds", "torch-expire-last-enabled", {
+		name: "Play Torch Expire Last Sound",
+        scope: "client",
+        config: false,
+		default: true,
+		type: Boolean,
+	});
+
+    game.settings.register("shadowdark-sounds", "torch-expire-last-sound", {
+		name: "Torch Expire Last Sound",
+        scope: "world",
+		config: false,
+		type: String,
+        default: "modules/shadowdark-sounds/assets/sounds/light-source-expire.ogg",
+        filePicker: true,
+        requiresReload: true
+	});
+
+    game.settings.register("shadowdark-sounds", "torch-expire-last-volume", {
+        name: "Torch Expire Last Volume",
+        scope: "world",
+        config: false,
+        type: Number,
+        range: {
+            min: 0.0,
+            max: 1.0,
+            step: 0.05
+        },
+        default: 0.5,
+    });
 }
 
 class SoundConfigurationApp extends HandlebarsApplicationMixin(ApplicationV2) {
@@ -252,7 +285,13 @@ class SoundConfigurationApp extends HandlebarsApplicationMixin(ApplicationV2) {
         const torchExpireEnabled = game.settings.get("shadowdark-sounds", "torch-expire-enabled");
         const torchExpireSound = game.settings.get("shadowdark-sounds", "torch-expire-sound");
         const torchExpireVolume = game.settings.get("shadowdark-sounds", "torch-expire-volume");
-        
+
+        const torchExpireLastTitle = game.i18n.localize("SDSOUNDS.torch_expire_last_title");
+        const torchExpireLastHint = game.i18n.localize("SDSOUNDS.torch_expire_last_hint");
+        const torchExpireLastEnabled = game.settings.get("shadowdark-sounds", "torch-expire-last-enabled");
+        const torchExpireLastSound = game.settings.get("shadowdark-sounds", "torch-expire-last-sound");
+        const torchExpireLastVolume = game.settings.get("shadowdark-sounds", "torch-expire-last-volume");
+
         return {
             torchIgniteTitle,
             torchIgniteHint,
@@ -284,6 +323,12 @@ class SoundConfigurationApp extends HandlebarsApplicationMixin(ApplicationV2) {
             torchExpireSound,
             torchExpireVolume,
 
+            torchExpireLastTitle,
+            torchExpireLastHint,
+            torchExpireLastEnabled,
+            torchExpireLastSound,
+            torchExpireLastVolume,
+
             buttons: [
                 { type: "submit", icon: "fa-solid fa-save", label: "SETTINGS.Save" }
             ]
@@ -297,6 +342,7 @@ class SoundConfigurationApp extends HandlebarsApplicationMixin(ApplicationV2) {
             "torch-drop",
             "torch-pickup",
             "torch-expire",
+            "torch-expire-last",
         ];
 
         for (const prefix of soundPrefixes) {

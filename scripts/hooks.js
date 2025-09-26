@@ -70,15 +70,11 @@ export function registerHooks() {
             const result = await wrapped.apply(this, args);
             const lastLightSource = isTheLastLightSource();
 
-            if (lastLightSource) {
-                if (game.settings.get("shadowdark-sounds", "torch-expire-last-enabled")) {
-                    playAudio("torch-expire-last");
-                }
-            }
-            else {
-                if (game.settings.get("shadowdark-sounds", "torch-expire-enabled")) {
-                    playAudio("torch-expire");
-                }
+            // If this was the last light source, play the "last" sound if enabled
+            if (lastLightSource && game.settings.get("shadowdark-sounds", "torch-expire-last-enabled")) {
+                playAudio("torch-expire-last");
+            } else if (game.settings.get("shadowdark-sounds", "torch-expire-enabled")) {
+                playAudio("torch-expire");
             }
 
             return result;

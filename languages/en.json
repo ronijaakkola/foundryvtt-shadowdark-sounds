@@ -18,5 +18,7 @@
   "SDSOUNDS.torch_pickup_title": "Light Source: Pickup",
   "SDSOUNDS.torch_pickup_hint": "Plays when a character picks up a light source from the ground.",
   "SDSOUNDS.torch_expire_title": "Light Source: Expire",
-  "SDSOUNDS.torch_expire_hint": "Plays when a light source expires."
+  "SDSOUNDS.torch_expire_hint": "Plays when a light source expires.",
+  "SDSOUNDS.torch_expire_last_title": "Light Source: Expire Last",
+  "SDSOUNDS.torch_expire_last_hint": "Plays when the last light source expires, leaving the character in darkness."
 }
